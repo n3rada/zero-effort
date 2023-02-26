@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "zero-effort"
+version = "1.0.0"
+description = "Exploiting CVE-2020-1472 without effort."
+authors = ["n3rada"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/n3rada/zero-effort"
+packages = [{include = "zero_effort"}]
+keywords = ["automation", "zerologon", "window", "exploit"]
+classifiers = ["Programming Language :: Python :: 3", "Topic :: Security"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+impacket = "^0.10.0"
+tqdm = "^4.64.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+zero-effort = 'zero_effort.console:cli'
