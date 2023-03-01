@@ -193,6 +193,7 @@ class Target:
                     # Don't care, you just want the smb_con instance
                     pass
                 else:
+                    self.__smb_port = port
                     return smb_con
 
     def __remote_dumping(self) -> None:
@@ -233,7 +234,7 @@ class Target:
         action = restorepassword.ChangeMachinePassword(
             username=self.__server_name,
             password=plaintext_password,
-            port=445,
+            port=self.__smb_port,
             hashes=None,
             domain_sids=False,
         )
@@ -245,11 +246,14 @@ class Target:
         logger.debug(f"DC ip address: {self.__ip}")
 
         self.__share_folder = share_folder or "ADMIN$"
-
+        
+        self.__smb_port = None
         smb_con = self.__get_smb_connection_object()
         if smb_con is None:
             logger.critical("SMB connection does not worked")
             raise ZeroEffortException
+            
+        logger.info(f"SMB port is: {self.__smb_port}")
 
         self.__server_name = smb_con.getServerName()
         logger.debug(f"DC name: {self.__server_name}")
