@@ -246,13 +246,13 @@ class Target:
         logger.debug(f"DC ip address: {self.__ip}")
 
         self.__share_folder = share_folder or "ADMIN$"
-        
+
         self.__smb_port = None
         smb_con = self.__get_smb_connection_object()
         if smb_con is None:
             logger.critical("SMB connection does not worked")
             raise ZeroEffortException
-            
+
         logger.info(f"SMB port is: {self.__smb_port}")
 
         self.__server_name = smb_con.getServerName()
@@ -457,7 +457,7 @@ class Target:
             # Run the "evil-winrm" command and capture the output
             subprocess.check_output(["evil-winrm", "-h"])
             # If the command runs without error, "evil-winrm" is available
-            logger.info(" Evil-WinRM is available, using-it")
+            logger.info("Evil-WinRM is available, using-it")
             logger.debug(
                 f'evil-winrm -i {self.__ip} -u "administrator" -H {self.__nthash}'
             )
