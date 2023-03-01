@@ -29,11 +29,6 @@ When using zerologon to perform such an attack, you can dump various types of da
 
 # Too much chatter, only want to run it
 
-Once installed, you can easily run this through `proxychains`:
-```shell
-proxychains -f ~/proxyconfs/lab.conf zero-effort 10.10.10.5
-```
-
 ## Installing the package
 You can directly install the wheel from the latest version using:
 ```shell
@@ -42,6 +37,13 @@ python3 -m pip install zero_effort-1.0.0-py3-none-any.whl
 And that's it. You can directly use the command line from your terminal:
 ```shell
 zero-effort -h
+```
+
+## Enjoy
+
+Once installed, you can easily run this through `proxychains`:
+```shell
+proxychains -f ~/proxyconfs/lab.conf zero-effort 10.10.10.5
 ```
 
 ## Poetry
