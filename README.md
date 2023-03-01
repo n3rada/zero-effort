@@ -1,21 +1,21 @@
 zero-effort
 ===========
 ```text
-                                                          000000000                                  
-                                                        00:::::::::00                          
-                                              __  __   00:::::::::::::00         _   
-                                            /  _|/ _| 0:::::::000:::::::0       | |  
-                                         ___| |_| |_  0::::::0   0::::::0   _ __| |_ 
-                                        / _ \  _|  _| 0:::::0     0:::::0  | '__| __|
-                                       |  __/ | | |   0:::::0 000 0:::::0  | |  | |_ 
-                                        \___|_| |_|   0:::::0     0:::::0  |_|   \__|
-                                               _      0:::::0     0:::::0    
-                                              | |     0::::::0   0::::::0   __ _  ___  _ __ 
-                                              | |     0:::::::000:::::::0  / _` |/ _ \| '_ \ 
-                                              | |      00:::::::::::::00  | (_| | (_) | | | |
-                                              | |____    00:::::::::00     \__, |\___/|_| |_|     
-                                              |______|     000000000       __/ |           
-                                                         CVE-2020-1472    |___/ 
+                                                000000000                                  
+                                              00:::::::::00                          
+                                    __  __   00:::::::::::::00         _   
+                                  /  _|/ _| 0:::::::000:::::::0       | |  
+                               ___| |_| |_  0::::::0   0::::::0   _ __| |_ 
+                              / _ \  _|  _| 0:::::0     0:::::0  | '__| __|
+                             |  __/ | | |   0:::::0 000 0:::::0  | |  | |_ 
+                              \___|_| |_|   0:::::0     0:::::0  |_|   \__|
+                                     _      0:::::0     0:::::0    
+                                    | |     0::::::0   0::::::0   __ _  ___  _ __ 
+                                    | |     0:::::::000:::::::0  / _` |/ _ \| '_ \ 
+                                    | |      00:::::::::::::00  | (_| | (_) | | | |
+                                    | |____    00:::::::::00     \__, |\___/|_| |_|     
+                                    |______|     000000000       __/ |           
+                                               CVE-2020-1472    |___/ 
 ```
 
 Improved version on steroids allowing to exploit [CVE-2020-1472](https://www.secura.com/uploads/whitepapers/Zerologon.pdf) vulnerability (a.k.a Zerologon) without effort. It combines the strenght of [Impacket](https://github.com/fortra/impacket) and automatically connects to the target machine through either [Evil-WinRM](https://github.com/Hackplayers/evil-winrm) or [WMI](https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmi-tasks--processes) semi-interactive shell.
